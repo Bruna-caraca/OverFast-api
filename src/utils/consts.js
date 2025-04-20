@@ -1,0 +1,2 @@
+export const iconPlace = 'https://images.blz-contentstack.com/v3/assets/blt9c12f249ac15c7ec/blt9ace1984db7fdb78/location.svg'
+export const iconBirthday = 'https://images.blz-contentstack.com/v3/assets/blt2477dcaf4ebd440c/blt67a2766e0907c6ec/64dd517afc196c96818b5781/birthday.svg'
