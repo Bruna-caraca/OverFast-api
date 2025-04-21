@@ -3,6 +3,8 @@ import { Header } from '../components/Header';
 import fundoHerois from '../assets/fundo-herois.png';
 import { HeroCard } from '../components/Card';
 import { fetchHeroes } from '../services/api';
+import { Loader } from '../components/Loader';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const filters = [
   { label: "Todos", value: "all" },
@@ -12,20 +14,32 @@ const filters = [
 ];
 
 export function HeroList() {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const role = searchParams.get("role") || "all"
   const [heroes, setHeroes] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedFilter, setSelectedFilter] = useState(role);
+
+  useEffect(() => {
+    setSelectedFilter(role);
+  }, [role]);
 
   useEffect(() => {
     setLoading(true);
-    fetchHeroes(selectedFilter)
+    fetchHeroes(role)
       .then((data) => {
         setHeroes(data);
         setLoading(false);
       });
-  }, [selectedFilter]);
+  }, [role]);
 
-  if (loading) return <p className="text-center mt-10 text-gray-500">Carregando...</p>;
+  const handleFilterChange = (newFilter) => {
+    setSelectedFilter(newFilter);
+    navigate(`/herois?role=${newFilter}`);
+  };
+
+  if (loading) return <Loader />;
 
   return (
     <div className='relative'>
@@ -42,7 +56,7 @@ export function HeroList() {
           {filters.map(filter => (
             <button
               key={filter.value}
-              onClick={() => setSelectedFilter(filter.value)}
+              onClick={() => handleFilterChange(filter.value)}
               className={`
                   px-6 py-2 rounded-md font-semibold transition
                   ${selectedFilter === filter.value

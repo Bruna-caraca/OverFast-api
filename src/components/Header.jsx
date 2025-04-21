@@ -30,7 +30,7 @@ export function Header() {
         className="ml-auto block md:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <X size={28} /> : <List size={28} />}
+        {isOpen ? <X color="#484B4D" size={28} /> : <List color="#484B4D" size={28} />}
       </button>
 
       {/* Links */}
