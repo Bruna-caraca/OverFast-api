@@ -13,6 +13,7 @@ export function Home() {
                     className='w-full h-screen object-cover absolute z-0 md:block inset-0' 
                     autoPlay
                     loop
+                    muted
                 />
                 <div className='absolute inset-0 bg-black/40'/>
                 <div className="relative z-10 flex flex-col items-center justify-center h-full">

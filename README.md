@@ -1,12 +1,44 @@
-# React + Vite
+# DashOW
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**DashOW** é uma aplicação web que consome a API do jogo Overwatch para exibir informações detalhadas sobre os heróis e mapas do jogo. Desenvolvido com **React.js**, **Tailwind CSS** e **Radix UI**, o projeto tem como foco a performance, responsividade e uma experiência visual moderna.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js
+- Tailwind CSS
+- Radix UI
+- Fetch API
+- Vite
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> ![Preview](public/DashOW-previa.mp4)
+
+## 📦 Funcionalidades
+
+- ✅ Listagem dos heróis do Overwatch
+- ✅ Listagem dos mapas do jogo
+- 🔍 Visual moderno com estilo flutuante para o menu em telas grandes
+- 📱 Layout responsivo adaptado para mobile com menu hambúrguer
+
+## Instalação e uso
+```
+git clone https://github.com/Bruna-caraca/OverFast-api.git
+```
+
+#### Acesse a pasta do projeto
+```
+cd OverFast-api
+```
+#### Instale as dependências
+```
+npm install
+```
+
+#### Inicie o servidor de desenvolvimento
+```
+npm run dev
+```
+## 🧠 Inspiração
+Este projeto foi criado com o intuito de explorar a API do Overwatch e praticar tecnologias modernas de frontend
+
