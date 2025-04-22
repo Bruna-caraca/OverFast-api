@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Bruna-caraca.github.io/Overfast-api",
+  "homepage": "https://bruna-caraca.github.io/OverFast-api",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
