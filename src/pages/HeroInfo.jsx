@@ -98,6 +98,7 @@ export function HeroInfo() {
             autoPlay
             loop
             muted
+            playsInline
             controlsList="nodownload nofullscreen noremoteplayback"
             className="absolute inset-0 w-full h-full object-cover"
           />
