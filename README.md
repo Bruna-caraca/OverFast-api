@@ -12,7 +12,9 @@
 
 ## 📸 Preview
 
-> ![Preview](public/DashOW-previa.mp4)
+> ![Tela herói](public/tela-herois.png)
+> ![Detalhes herói](public/detalhes-heroi.png)
+> ![Tela mapas](public/tela-mapas.png)
 
 ## 📦 Funcionalidades
 
