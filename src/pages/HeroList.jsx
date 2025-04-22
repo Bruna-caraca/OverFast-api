@@ -5,6 +5,7 @@ import { HeroCard } from '../components/Card';
 import { fetchHeroes } from '../services/api';
 import { Loader } from '../components/Loader';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { BackToTopButton } from '../components/BackToTopButton';
 
 const filters = [
   { label: "Todos", value: "all" },
@@ -83,6 +84,7 @@ export function HeroList() {
           ))}
         </div>
       </section>
+      <BackToTopButton />
     </div>
   );
 }

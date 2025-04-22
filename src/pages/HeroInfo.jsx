@@ -7,6 +7,7 @@ import { iconPlace, iconBirthday } from '../utils/consts'
 import { Loader } from '../components/Loader';
 import { BookBookmark, CaretDown, Pause, Play } from 'phosphor-react';
 import { Accordion } from 'radix-ui';
+import { BackToTopButton } from '../components/BackToTopButton';
 
 export function HeroInfo() {
   const videoRef = useRef(null);
@@ -88,7 +89,7 @@ export function HeroInfo() {
       </div>
       {hero.abilities?.length > 0 && (
         <div className="relative aspect-video w-full md:h-[80vh] h-[90vh]">
-          <h2 className="absolute top-10 left-1/2 -translate-x-1/2 text-4xl md:text-4xl font-bold text-white z-10 drop-shadow-lg z-20 uppercase">
+          <h2 className="absolute top-10 left-1/2 -translate-x-1/2 text-4xl md:text-4xl font-bold text-white drop-shadow-lg z-20 uppercase">
             Habilidades
           </h2>
           <video
@@ -225,6 +226,7 @@ export function HeroInfo() {
           />
         </div>
       </section>
+      <BackToTopButton />
     </div>
   );
 }

@@ -13,3 +13,17 @@ export async function fetchHeroDetails(heroKey) {
   const res = await fetch(`${BASE_URL}/heroes/${heroKey}?locale=pt-br`);
   return res.json();
 }
+
+export async function fetchGamemodes() {
+  const res = await fetch(`${BASE_URL}/gamemodes`);
+  return res.json();
+}
+
+export async function fetchMaps(gamemode = null) {
+  let url = `${BASE_URL}/maps`;
+  if (gamemode !== null) {
+    url += `?gamemode=${gamemode}`;
+  }
+  const res = await fetch(url);
+  return res.json();
+}
