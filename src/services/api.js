@@ -11,6 +11,11 @@ export async function fetchHeroes(role = 'all') {
 
 export async function fetchHeroDetails(heroKey) {
   const res = await fetch(`${BASE_URL}/heroes/${heroKey}?locale=pt-br`);
+
+  if (!res.ok) {
+    throw new Error("Hero not found");
+  }
+
   return res.json();
 }
 

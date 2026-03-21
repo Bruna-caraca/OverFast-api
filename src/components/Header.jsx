@@ -59,7 +59,7 @@ export function Header() {
             href="https://overwatch.blizzard.com/pt-br/"
             className="select-none leading-none text-gray-600 block"
           >
-            <button className="bg-[#F1742B] text-white px-4 py-3 rounded-md font-semibold hover:bg-orange-400 w-full md:w-auto">
+            <button className="bg-[#F1742B] text-white px-4 py-3 rounded-md font-semibold hover:bg-orange-400 w-full md:w-auto cursor-pointer">
               Visite o site oficial
             </button>
           </NavigationMenu.Link>

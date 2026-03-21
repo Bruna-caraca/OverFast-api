@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { fetchHeroDetails } from '../services/api';
 import { Header } from '../components/Header';
@@ -12,18 +12,21 @@ import { BackToTopButton } from '../components/BackToTopButton';
 export function HeroInfo() {
   const videoRef = useRef(null);
   const { heroKey } = useParams();
+  const navigate = useNavigate();
   const [hero, setHero] = useState(null);
   const [selectedAbility, setSelectedAbility] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [activeImage, setActiveImage] = useState();
 
   useEffect(() => {
-    fetchHeroDetails(heroKey).then(data => setHero(data));
+    fetchHeroDetails(heroKey)
+      .then(data => setHero(data))
+      .catch(() => navigate("/404"));
   }, [heroKey]);
 
   useEffect(() => {
     setActiveImage(hero?.story?.chapters[0]?.picture)
-  }, hero)
+  }, [hero]);
 
   const togglePlay = () => {
     const video = videoRef.current;
@@ -80,7 +83,7 @@ export function HeroInfo() {
           </div>
           <div className="flex">
             <img className='w-6' src={iconBirthday} />
-            <span className="text-md m-2">{`${hero.birthday === null ? 'Desconhecido' : hero.birthday} (${hero.age} ${hero.age > 1 ? 'anos' : 'ano'})`}</span>
+            <span className="text-md m-2">{`${hero.birthday === null ? 'Desconhecido' : hero.birthday} ${hero.age !== null ? `(${hero.age} ${hero.age > 1 ? 'anos' : 'ano'})` : ''}`}</span>
           </div>
         </div>
         <div className={`relative md:-mt-0 z-20 ${heroImageSizes[heroKey]}`}>
