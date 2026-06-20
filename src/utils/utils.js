@@ -60,6 +60,8 @@ export const heroImageSizes = {
     reaper: "-mt-12 md:-ml-10 lg:-ml-15 w-[200px] md:w-[280px] lg:w-[420px]",
     reinhardt: "-mt-12 md:-ml-5 lg:-ml-5 w-[200px] md:w-[280px] lg:w-[570px]",
     roadhog: "-mt-12 md:-ml-10 lg:-ml-12 w-[360px] md:w-[480px] lg:w-[730px]",
+    shion: "-mt-12 md:-ml-15 lg:-ml-15 w-[290px] md:w-[370px] lg:w-[410px]",
+    sierra: "-mt-15 md:-ml-10 lg:-ml-10 w-[280px] md:w-[370px] lg:w-[400px]",
     sigma: "-mt-12 md:-ml-15 lg:-ml-40 w-[290px] md:w-[370px] lg:w-[730px]",
     sojourn: "-mt-12 md:-ml-5 lg:-ml-5 w-[200px] md:w-[280px] lg:w-[310px]",
     'soldier-76': "-mt-12 md:-ml-40 lg:-ml-60 w-[360px] md:w-[480px] lg:w-[730px]",
